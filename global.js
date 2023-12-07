@@ -1,6 +1,7 @@
 
  setTimeout(()=> {
-    console.log('in the time out')
+    console.log('in the time out');
+    clearInterval(interval);
 }, 3000)
 
 const interval = setInterval(()=> {
