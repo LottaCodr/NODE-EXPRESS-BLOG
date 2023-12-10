@@ -3,12 +3,18 @@ const express = require('express');
 //create an express app
 const app = express();
 
+//create a middleware with morgan
+const morgan = require('morgan')
+
 //register view engine
 app.set('view engine', 'ejs');
-app
+
+app.use(morgan('dev'))
 
 //listen for requests
 app.listen(3000);
+
+
 app.get('/',(req, res)=>{
     const blogs = [
         {title: 'First post', snippet: 'This is the real'},
