@@ -9,11 +9,13 @@ const morgan = require('morgan')
 //register view engine
 app.set('view engine', 'ejs');
 
-app.use(morgan('dev'))
 
 //listen for requests
 app.listen(3000);
 
+//static thirdparty middleware
+app.use(express('public'));
+app.use(morgan('dev'));
 
 app.get('/',(req, res)=>{
     const blogs = [
