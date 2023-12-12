@@ -1,10 +1,18 @@
 const express = require('express');
-
-//create an express app
-const app = express();
-
 //create a middleware with morgan
 const morgan = require('morgan')
+const mongoose = require('mongoose');
+
+mongoose.connect(URL);
+
+//create an express app 
+const app = express();
+
+
+//connect to mongoDB 
+//remember to edit the password and username embbed in the link
+URI = 'mongodb+srv://kinglotta:Wakavelli@cluster0.jcemsc7.mongodb.net/?retryWrites=true&w=majority';
+
 
 //register view engine
 app.set('view engine', 'ejs');
