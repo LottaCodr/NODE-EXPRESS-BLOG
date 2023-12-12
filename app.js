@@ -11,7 +11,6 @@ const app = express();
 
 //connect to mongoDB 
 //remember to edit the password and username embbed in the link
-URI = 'mongodb+srv://kinglotta:Wakavelli@cluster0.jcemsc7.mongodb.net/?retryWrites=true&w=majority';
 
 
 //register view engine
